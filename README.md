@@ -26,17 +26,11 @@ module.exports = {
         exclude: ["/preview/**", "/do-not-track/me/too/"],
         // Enables Google Optimize using your container Id
         optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
-        // Any additional create only fields (optional)
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
       },
     },
   ],
-}
+};
 ```
-
-See below for the complete list of [Create Only Fields](#create-only-fields).
 
 ## `<OutboundLink>` component
 
@@ -91,23 +85,3 @@ If you need to exclude any path from the tracking system, you can add it (one or
 ## The "optimizeId" option
 
 If you need to use Google Optimize for A/B testing, you can add this optional Optimize container id to allow Google Optimize to load the correct test parameters for your site.
-
-## Create Only Fields
-
-This plugin supports all optional Create Only Fields documented in [Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#create):
-
-- `name`: string, tracker name
-- `clientId`: string
-- `sampleRate`: number
-- `siteSpeedSampleRate`: number
-- `alwaysSendReferrer`: boolean
-- `allowAnchor`: boolean
-- `cookieName`: string
-- `cookieDomain`: string, defaults to `'auto'` if not given
-- `cookieExpires`: number
-- `storeGac`: boolean
-- `legacyCookieDomain`: string
-- `legacyHistoryImport`: boolean
-- `allowLinker`: boolean
-
-These fields can be specified in the plugin's `options` as shown in the [How to use](#how-to-use) section.
